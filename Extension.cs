@@ -33,7 +33,7 @@ namespace Connection.Identifier.Quoting
             }
         }
 
-        public static string QuoteIdentifier(this IDbConnection connection, string identifier)
+        public static string QuoteIdentifier(this string identifier, IDbConnection connection)
         {
             var startChar = connection.StartCharacter();
             var endChar = connection.EndCharacter();
