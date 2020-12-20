@@ -18,13 +18,13 @@ jobs:
       with:
         dotnet-version: 3.1.301
     - name: Install dependencies
-      run: dotnet restore Connection.Identifier.Quoting/Connection.Identifier.Quoting.csproj
+      run: dotnet restore Connection.Identifier.Quoting.csproj
     - name: Build
-      run: dotnet build --configuration Release --no-restore Connection.Identifier.Quoting/Connection.Identifier.Quoting.csproj
+      run: dotnet build --configuration Release --no-restore Connection.Identifier.Quoting.csproj
     - name: Test
-      run: dotnet test --no-restore --verbosity normal Connection.Identifier.Quoting/Connection.Identifier.Quoting.csproj
+      run: dotnet test --no-restore --verbosity normal Connection.Identifier.Quoting.csproj
     - name: Publish
       uses: brandedoutcast/publish-nuget@v2.5.2
       with:
-          PROJECT_FILE_PATH: Connection.Identifier.Quoting/Connection.Identifier.Quoting.csproj
+          PROJECT_FILE_PATH: Connection.Identifier.Quoting.csproj
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
