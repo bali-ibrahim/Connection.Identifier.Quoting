@@ -5,9 +5,10 @@
     <Authors>İbrahim Bali</Authors>
     <Description>Quting sql identifiers (tables, columns, etc.) based on the underlying sql technology</Description>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <Version>1.0.1</Version>
-    <AssemblyVersion>1.0.0.1</AssemblyVersion>
-    <PackageReleaseNotes>refactor: swap extended object and parameter in QuoteIdentifier</PackageReleaseNotes>
+    <Version>1.0.2</Version>
+    <AssemblyVersion>1.0.0.2</AssemblyVersion>
+    <PackageReleaseNotes>fix: stop escaping the start &amp; end characters twice if they're the same</PackageReleaseNotes>
+    <FileVersion>1.0.0.2</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

@@ -40,8 +40,11 @@ namespace Connection.Identifier.Quoting
 
             var escapedIdentifier = identifier
                 .EscapeByRepeating(startChar)
-                .EscapeByRepeating(endChar)
                 ;
+            if (startChar != endChar)
+            {
+                escapedIdentifier = escapedIdentifier.EscapeByRepeating(endChar);
+            }
             var result = $"{startChar}{escapedIdentifier}{endChar}";
             return result;
         }
